@@ -105,3 +105,17 @@ Keep your project up-to-date with the latest stock market data sources and APIs.
 Monitor and optimize your application's performance and scalability.
 Listen to user feedback and consider adding new features or enhancements.
 Building a stock market project that incorporates real-time data, interactive charts, and user authentication can be a substantial undertaking. It requires proficiency in Go, JavaScript, HTML, CSS, and data visualization libraries. Additionally, staying informed about financial data sources and stock market trends is essential for accurate and up-to-date information.
+
+handlers/: Contains HTTP request handlers that handle incoming requests and route them to the appropriate service.
+
+models/: Defines database schema and models. You can use a Go ORM library like GORM or write raw SQL queries to interact with PostgreSQL.
+
+repositories/: Houses the database interaction logic for specific entities (e.g., stocks, users). Separating this logic from the handlers allows for better code organization.
+
+services/: Contains business logic for different application features. Services orchestrate interactions between handlers, repositories, and models.
+
+static/: Stores static assets like CSS, JavaScript, and images.
+
+templates/: Contains HTML templates for rendering views. You can organize templates based on the functionality they provide (e.g., stock-related templates, user-related templates).
+
+utils/: Contains utility functions and configuration settings.
