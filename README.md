@@ -25,6 +25,11 @@ Implement data processing and analysis algorithms to calculate indicators, perfo
 
 stock-market-project/
     ├── main.go
+    ├── api/
+    │   ├── client.go           # API client for making HTTP requests to external APIs
+    │   ├── stockAPI.go         # Functions and methods for interacting with the stock-related API
+    │   ├── userAPI.go          # Functions and methods for interacting with user-related APIs (if applicable)
+    │   └── ...
     ├── handlers/
     │   ├── stock_handler.go
     │   ├── user_handler.go
@@ -119,3 +124,13 @@ static/: Stores static assets like CSS, JavaScript, and images.
 templates/: Contains HTML templates for rendering views. You can organize templates based on the functionality they provide (e.g., stock-related templates, user-related templates).
 
 utils/: Contains utility functions and configuration settings.
+
+api/: Contains key files interacting with external APIs. 
+- client.go: Contains an HTTP client that you can use to make HTTP requests to external APIs. You can use Go's 'net/http'
+package or other HTTP client libraries
+- stockAPI.go and userAPI.go: These files contain functions and methods specific to interacting with the external APIs related to stocks and users (if applicable).
+You can define functions for making API requests, parsing responses, and handling errors.
+
+When you need to interact with the external API, you can import and use the functions defined in the api/ directory within your relevant handlers, services, or controllers. For example, your stockHandler.go can use functions from api/stockAPI.go to fetch stock data from the external API and then process and display it.
+
+This structure allows you to keep the API-related code organized and separate from your core application logic. It also makes it easier to maintain and extend your project as you may need to interact with more APIs or change the API-related code in the future.
